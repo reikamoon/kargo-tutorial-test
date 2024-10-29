@@ -14,11 +14,11 @@ spec:
       direct: true
   promotionMechanisms:
     gitRepoUpdates:
-    - repoURL: https://github.com/<repo>
+    - repoURL: https://github.com/reikamoon/kargo-tutorial-test
       writeBranch: main
       kustomize:
         images:
-        - image: ghcr.io/<user>/guestbook
+        - image: ghcr.io/reikamoon/guestbook
           path: app/env/dev
     argoCDAppUpdates: []
 
@@ -40,11 +40,11 @@ spec:
       - dev
   promotionMechanisms:
     gitRepoUpdates:
-    - repoURL: https://github.com/<repo>
+    - repoURL: https://github.com/reikamoon/kargo-tutorial-test
       writeBranch: main
       kustomize:
         images:
-        - image: ghcr.io/<user>/guestbook
+        - image: ghcr.io/reikamoon/guestbook
           path: app/env/staging
     argoCDAppUpdates: []
 ---
@@ -65,11 +65,11 @@ spec:
     - staging
   promotionMechanisms:
     gitRepoUpdates:
-    - repoURL: https://github.com/<repo>
+    - repoURL: https://github.com/reikamoon/kargo-tutorial-test
       writeBranch: main
       kustomize:
         images:
-        - image: ghcr.io/<user>/guestbook
+        - image: ghcr.io/reikamoon/guestbook
           path: app/env/prod
       pullRequest: {}
     argoCDAppUpdates: []
