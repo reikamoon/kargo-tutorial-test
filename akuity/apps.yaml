@@ -20,7 +20,7 @@ spec:
     metadata:
       name: 'guestbook-simple-{{env}}'
       annotations:
-        kargo.akuity.io/authorized-stage: kargo-simple:*
+        kargo.akuity.io/authorized-stage:kargo-demo:{{env}}
     spec:
       project: default
       source:
