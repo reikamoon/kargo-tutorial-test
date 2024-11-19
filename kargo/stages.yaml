@@ -2,7 +2,7 @@ apiVersion: kargo.akuity.io/v1alpha1
 kind: Stage
 metadata:
   name: test
-  namespace: kargo-demo
+  namespace: guestbook-simple
 spec:
   requestedFreight:
   - origin:
@@ -19,7 +19,7 @@ spec:
           checkout:
           - branch: main
             path: ./src
-          - branch: stage/test
+          - branch: env/test
             create: true
             path: ./out
       - uses: git-clear
@@ -33,7 +33,7 @@ spec:
           - image: public.ecr.aws/nginx/nginx
       - uses: kustomize-build
         config:
-          path: ./src/app/env/staging
+          path: ./src/app/env/test
           outPath: ./out/manifests.yaml
       - uses: git-commit
         as: commit
@@ -44,7 +44,7 @@ spec:
       - uses: git-push
         config:
           path: ./out
-          targetBranch: stage/test
+          targetBranch: env/test
       - uses: argocd-update
         config:
           apps:
