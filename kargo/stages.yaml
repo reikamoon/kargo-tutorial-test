@@ -48,7 +48,7 @@ spec:
       - uses: argocd-update
         config:
           apps:
-          - name: my-argocd-instance
+          - name: guestbook-simple-test
             sources:
             - repoURL: https://github.com/reikamoon/kargo-tutorial-test
               desiredCommitFromStep: commit
