@@ -21,7 +21,7 @@ akuity argocd apply -f akuity/
 echo -n "Waiting for the Argo CD instance to be healthy."
 counter=0
 while true; do
-    [[ ${counter} -ge 5 ]] && echo -e "\nError: Timed out wating for instance" && exit 13
+    [[ ${counter} -ge 5 ]] && echo -e "\nError: Timed out waiting for instance" && exit 13
     health_status=$(get_health_status)
     if [ "$health_status" = "STATUS_CODE_HEALTHY" ]; then
         echo -e "\nThe Argo CD instance is healthy!"
