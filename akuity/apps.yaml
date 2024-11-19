@@ -13,7 +13,7 @@ spec:
                 - {key: akuity.io/argo-cd-cluster-name, operator: NotIn, values: [in-cluster]}
           - list:
               elements:
-              - env: dev
+              - env: test
               - env: staging
               - env: prod
   template:
