@@ -3,5 +3,4 @@ kind: Project
 metadata:
   name: kargo-demo
   annotations:
-  
   argocd.argoproj.io/sync-wave: "-1"
