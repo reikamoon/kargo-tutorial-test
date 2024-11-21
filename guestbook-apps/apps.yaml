@@ -3,6 +3,8 @@ kind: ApplicationSet
 metadata:
   name: guestbook
   namespace: argocd
+  annotations:
+    kargo.akuity.io/authorized-stage: kargo-demo:test
 spec:
   generators:
     - matrix:
